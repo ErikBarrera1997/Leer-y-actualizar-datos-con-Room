@@ -16,7 +16,8 @@
 
 package com.example.inventory.data
 
-import androidx.room.vo.Entity
+import androidx.room.PrimaryKey
+import androidx.room.Entity
 
 
 /**
@@ -25,7 +26,7 @@ import androidx.room.vo.Entity
 @Entity(tableName = "items")
 data class Item(
 
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
     val name: String,
     val price: Double,
