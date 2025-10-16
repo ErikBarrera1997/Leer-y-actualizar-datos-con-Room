@@ -20,6 +20,9 @@ import kotlinx.coroutines.flow.Flow
  * Repository that provides insert, update, delete, and retrieve of [Item] from a given data source.
  */
 interface ItemsRepository{
+
+    val homeUiState: StateFlow<HomeUiState> =
+        itemsRepository.getAllItemsStream()
     /**
      * Retrieve all the items from the  given data source.
      */
